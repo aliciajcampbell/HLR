@@ -144,7 +144,8 @@ class HierarchicalLinearRegression:
                 'MSE (total)': model.mse_total,
                 'Beta coefs': model.params.to_dict(),
                 'P-values (beta coefs)': model.pvalues.to_dict(),
-                'T-values (beta coefs)': model.tvalues.to_dict() # added t values - ally
+                'T-values (beta coefs)': model.tvalues.to_dict(), # added t values - ally
+                'Standard errors': model.bse.to_dict() # added SE values - ally
             }
             results.update(add_stats)
             if level in change_stats:
